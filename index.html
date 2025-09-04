@@ -1,82 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My App</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      background: #f9fafb;
-      color: #111827;
-      text-align: center;
-    }
-    header {
-      padding: 2rem 1rem;
-    }
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.1rem;
-      color: #4b5563;
-    }
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin: 2rem 0;
-      flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.25rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.2s;
-    }
-    .btn.appstore {
-      background: #000;
-      color: #fff;
-    }
-    .btn.appstore:hover {
-      background: #333;
-    }
-    .btn.playstore {
-      background: #34d399;
-      color: #fff;
-    }
-    .btn.playstore:hover {
-      background: #059669;
-    }
-    footer {
-      margin-top: auto;
-      padding: 1rem;
-      font-size: 0.875rem;
-      color: #6b7280;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemindMe - Smart Reminders for iOS & Apple Watch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
 </head>
-<body>
-  <header>
-    <h1>🚀 My Awesome App</h1>
-    <p>The simplest way to <strong>describe your value</strong> in one line.</p>
-  </header>
+<body class="bg-white">
+    <!-- Hero Section -->
+    <section class="bg-black text-white py-32">
+        <div class="container mx-auto px-4 text-center">
+            <img src="images/logo_small.png" alt="RemindMe logo" class="mx-auto mb-6 w-32 h-32 rounded-2xl" />
+            <h1 class="text-7xl md:text-8xl font-black mb-8 tracking-tight">RemindMe</h1>
+            <p class="text-2xl md:text-3xl mb-12 max-w-4xl mx-auto font-light leading-relaxed">Smart, customizable reminders that sync seamlessly between your iPhone and Apple Watch. Never miss what matters.</p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="#" class="group flex items-center gap-3 bg-white text-black px-8 py-4 rounded-2xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                    </svg>
+                    <span>Download on iOS</span>
+                </a>
+                <a href="#" class="group flex items-center gap-3 border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 cursor-not-allowed opacity-60">
+                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                    </svg>
+                    <span>Coming Soon</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <div class="buttons">
-    <a href="#" class="btn appstore"> App Store</a>
-    <a href="#" class="btn playstore">▶ Google Play</a>
-  </div>
+    <!-- Features Section -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-6xl font-black text-center mb-24 text-black tracking-tight">Why Choose RemindMe?</h2>
+            <div class="grid md:grid-cols-3 gap-16">
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-black rounded-full flex items-center justify-center mx-auto mb-8">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-black">Custom Intervals</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed">Set reminders for any time interval - minutes, hours, or custom periods that fit your schedule perfectly.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-black rounded-full flex items-center justify-center mx-auto mb-8">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-black">Apple Watch Sync</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed">Your reminders automatically sync between iPhone and Apple Watch, keeping you connected everywhere you go.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-black rounded-full flex items-center justify-center mx-auto mb-8">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 17h5l-5 5v-5zM4 19h6a2 2 0 002-2V7a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-black">Smart Pause</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed">Pause all notifications with one tap when you need focus time, then resume when you're ready.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    &copy; 2025 My App. All rights reserved.
-  </footer>
+    <!-- Screenshots Section -->
+    <section class="py-32 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-6xl font-black text-center mb-24 text-black tracking-tight">See It in Action</h2>
+            <div class="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto">
+                <div class="bg-white p-8 rounded-3xl shadow-2xl flex flex-col h-full">
+                    <div class="flex-1 flex items-center justify-center">
+                        <img src="images/screenshots/Iphone.png" alt="iPhone" class="mx-auto rounded-3xl w-full max-w-sm h-auto" />
+                    </div>
+                    <p class="mt-6 text-center text-gray-600 text-lg">Clean, intuitive interface for managing your reminders</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-2xl flex flex-col h-full">
+                    <div class="flex-1 flex items-center justify-center">
+                        <img src="images/screenshots/Watch.png" alt="Apple Watch" class="mx-auto rounded-3xl w-full max-w-xs h-auto" />
+                    </div>
+                    <p class="mt-6 text-center text-gray-600 text-lg">Quick access to reminders on your Apple Watch</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-6xl font-black text-center mb-24 text-black tracking-tight">What Users Say</h2>
+            <div class="max-w-8xl mx-auto relative px-20">
+                <div id="testimonial-carousel" class="relative" data-carousel="static">
+                    <div class="overflow-hidden">
+                        <div class="flex transition-transform duration-700 ease-in-out" id="testimonial-slides">
+                            <!-- Slide 1: Testimonial 1 & 2 -->
+                            <div class="w-full flex-shrink-0">
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div class="bg-gray-50 p-8 rounded-3xl h-full">
+                                        <p class="text-gray-700 mb-6 text-lg leading-relaxed italic">"RemindMe has completely changed how I stay organized. The Apple Watch integration is seamless and the interface is incredibly intuitive!"</p>
+                                        <div class="flex items-center">
+                                            <div>
+                                                <p class="font-bold text-black">Sarah M.</p>
+                                                <p class="text-gray-500">iOS Developer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-50 p-8 rounded-3xl h-full">
+                                        <p class="text-gray-700 mb-6 text-lg leading-relaxed italic">"Simple, effective, and the pause feature is genius. Perfect for my busy schedule and helps me stay focused when needed."</p>
+                                        <div class="flex items-center">
+                                            <div>
+                                                <p class="font-bold text-black">Mike R.</p>
+                                                <p class="text-gray-500">Product Manager</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 2: Testimonial 3 & 4 -->
+                            <div class="w-full flex-shrink-0">
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div class="bg-gray-50 p-8 rounded-3xl h-full">
+                                        <p class="text-gray-700 mb-6 text-lg leading-relaxed italic">"Thanks to RemindMe's posture reminders every hour, my back pain has significantly improved. I'm finally sitting up straight!"</p>
+                                        <div class="flex items-center">
+                                            <div>
+                                                <p class="font-bold text-black">Emma L.</p>
+                                                <p class="text-gray-500">Remote Worker</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-50 p-8 rounded-3xl h-full">
+                                        <p class="text-gray-700 mb-6 text-lg leading-relaxed italic">"I set reminders for quick exercises throughout the day. Now I'm doing 20 push-ups every 2 hours - it's amazing how much more active I feel!"</p>
+                                        <div class="flex items-center">
+                                            <div>
+                                                <p class="font-bold text-black">David K.</p>
+                                                <p class="text-gray-500">Fitness Enthusiast</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 3: Testimonial 5 & 6 -->
+                            <div class="w-full flex-shrink-0">
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div class="bg-gray-50 p-8 rounded-3xl h-full">
+                                        <p class="text-gray-700 mb-6 text-lg leading-relaxed italic">"I love the water reminder feature! I set it to remind me every 90 minutes and I'm finally staying properly hydrated throughout the day."</p>
+                                        <div class="flex items-center">
+                                            <div>
+                                                <p class="font-bold text-black">Lisa P.</p>
+                                                <p class="text-gray-500">Health Coach</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-50 p-8 rounded-3xl h-full">
+                                        <p class="text-gray-700 mb-6 text-lg leading-relaxed italic">"The custom interval feature is perfect for my medication schedule. I can set different reminders for morning, afternoon, and evening doses."</p>
+                                        <div class="flex items-center">
+                                            <div>
+                                                <p class="font-bold text-black">Robert T.</p>
+                                                <p class="text-gray-500">Healthcare Professional</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation buttons -->
+                    <button type="button" class="absolute top-1/2 -left-16 z-30 flex items-center justify-center h-12 w-12 rounded-full bg-black/30 text-white hover:bg-black/50 focus:outline-none focus:ring-2 focus:ring-black/20 transition-all duration-300" data-carousel-prev>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                        </svg>
+                    </button>
+                    <button type="button" class="absolute top-1/2 -right-16 z-30 flex items-center justify-center h-12 w-12 rounded-full bg-black/30 text-white hover:bg-black/50 focus:outline-none focus:ring-2 focus:ring-black/20 transition-all duration-300" data-carousel-next>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Indicators below testimonials -->
+                <div class="flex justify-center space-x-3 mt-8">
+                    <button type="button" class="w-3 h-3 rounded-full bg-black/30 hover:bg-black/50" data-carousel-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" class="w-3 h-3 rounded-full bg-black/30 hover:bg-black/50" data-carousel-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" class="w-3 h-3 rounded-full bg-black/30 hover:bg-black/50" data-carousel-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="py-32 bg-black text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-6xl font-black mb-8 text-white tracking-tight">Get RemindMe Today</h2>
+            <p class="text-2xl mb-12 max-w-3xl mx-auto font-light leading-relaxed">Join thousands of users who never miss important reminders. Download now and stay organized.</p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="#" class="group flex items-center gap-3 bg-white text-black px-10 py-5 rounded-2xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 text-lg">
+                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                    </svg>
+                    <span>Download on iOS</span>
+                </a>
+                <a href="#" class="group flex items-center gap-3 border-2 border-white text-white px-10 py-5 rounded-2xl font-semibold transition-all duration-300 cursor-not-allowed opacity-60 text-lg">
+                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                    </svg>
+                    <span>Coming Soon</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">&copy; 2025 RemindMe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script>
+        // Auto-play carousel
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.getElementById('testimonial-carousel');
+            const slides = document.getElementById('testimonial-slides');
+            const totalSlides = 3; // Total number of slides
+            let currentSlide = 0;
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlide();
+            }
+            
+            function updateSlide() {
+                const translateX = -currentSlide * 100;
+                slides.style.transform = `translateX(${translateX}%)`;
+                
+                // Update indicators
+                document.querySelectorAll('[data-carousel-slide-to]').forEach((indicator, index) => {
+                    if (index === currentSlide) {
+                        indicator.classList.add('bg-black');
+                        indicator.classList.remove('bg-black/30');
+                    } else {
+                        indicator.classList.remove('bg-black');
+                        indicator.classList.add('bg-black/30');
+                    }
+                });
+            }
+            
+            // Auto-advance every 8 seconds
+            setInterval(nextSlide, 8000);
+            
+            // Manual navigation
+            document.querySelectorAll('[data-carousel-slide-to]').forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentSlide = index;
+                    updateSlide();
+                });
+            });
+            
+            // Previous/Next buttons
+            document.querySelector('[data-carousel-prev]').addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlide();
+            });
+            
+            document.querySelector('[data-carousel-next]').addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlide();
+            });
+        });
+    </script>
 </body>
 </html>
